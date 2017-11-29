@@ -10,6 +10,7 @@ include("fun.inc.php");
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <?php head()?>
     <style>
         /* Remove the navbar's default margin-bottom and rounded borders */
         .navbar {
@@ -59,9 +60,6 @@ include("fun.inc.php");
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <?php navbar(2)?>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
         </div>
     </div>
 </nav>

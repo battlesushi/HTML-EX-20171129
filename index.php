@@ -1,98 +1,89 @@
-<?php
-include("fun.inc.php");
-?>
 <!DOCTYPE html>
-<html lang="en">
+<?php //include("mysql_connect.inc.php");
+//$sql="SELECT * From config WHERE webid =1";
+//$result = mysql_query($sql);
+//$row = mysql_fetch_row($result);
+//$webName=$row[1];
+//$webSlogon=$row[2];
+//$email=$row[3];
+//?>
+<html lang="zh">
 <head>
-    <title>莊政宏教師檔案</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-        /* Remove the navbar's default margin-bottom and rounded borders */
-        .navbar {
-            margin-bottom: 0;
-            border-radius: 0;
-        }
-        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-        .row.content {height: 450px}
-        /* Set gray background color and 100% height */
-        .sidenav {
-            padding-top: 20px;
-            background-color: #f1f1f1;
-            height: 100%;
-        }
-        /* Set black background color, white text and some padding */
-        footer {
-            background-color: #555;
-            color: white;
-            padding: 15px;
-        }
-        /* On small screens, set height to 'auto' for sidenav and grid */
-        @media screen and (max-width: 767px) {
-            .sidenav {
-                height: auto;
-                padding: 15px;
+    <audio autoplay loop>
+        <source src="music/losttime.mp3" type="audio/mpeg">
+    </audio>
+
+    <link rel=stylesheet type="text/css" href="css/style.css">
+    <!--   <link href="css/bootstrap.min.css" rel="stylesheet"><!-- 圖片位置要修 但會影響區塊-->
+    <title>個人簡介</title>
+    <!--
+          <script language="JavaScript">
+            function login(){
+                window.open('login.html')
             }
-            .row.content {height:auto;}
-        }
-    </style>
+          </script>
+    -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <!--//////////////////////////////////////////////////    -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
 
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">莊政宏</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <?php navbar(1)?>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                <!--target="_self" data-toggle="modal" data-target="#login-modal"-->
-            </ul>
-        </div>
-    </div>
-</nav>
+<body background="images/1433.png" text="rgb(244, 11, 154)" style="letter-spacing:3px;">
+<!--
+    <div class="row">
+<div class="col-md-1"></div>
+-->
+<header><h1>MEKAKUCITY ACTORS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NO.6:ENE</h1>
+    <!--     <h2>--><?php //echo $webSlogon ?><!--</h2>-->
+    <!--     <a class="btn btn-full" href="index2.html" target="_blank">通訊錄</a> -->
 
-<div class="container-fluid text-center">
-    <div class="row content">
-        <div class="col-sm-2 sidenav">
-            <p class="text-right"><a href="#">期刊論文／Journal Paper</a></p>
-            <p class="text-right"><a href="#">研討會論文／Conference Papers</a></p>
-            <p class="text-right"><a href="#">研究計畫／Research Grant</a></p>
-            <p class="text-right"><a href="#">獲獎／Award</a></p>
-            <p class="text-right"><a href="#">授課課程／Course</a></p>
-            <p class="text-right"><a href="#">指導論文／Thesis advising</a></p>
-            <p class="text-right"><a href="#">指導大專生計畫</a></p>
-        </div>
-        <div class="col-sm-8 text-left">
-            <p align="center"><img src="Cheng_Hung_Chuang.jpg" alt="莊政宏"></p>
-            <div style="text-align: center;"><p><i>莊政宏 副教授</i></p></div>
-        </div>
-        <div class="col-sm-2 sidenav">
-            <div class="well">
-            </div>
-            <div class="well">
-                <p>ADS</p>
-            </div>
-        </div>
-    </div>
-</div>
+    <a class="btn btn-full" href="https://www.facebook.com/profile.php?id=100000488523349" target="_blank">FB</a>
+    <a class="btn btn-full" href="indexT.php" target="_blank">教師網頁</a>
+</header>
+<center><h1 style="color:#425fff;text-shadow:2px 3px 1px rgba(255, 255, 255, 0.88);">張廷毓的個人簡介</h1>
+    <img src="images/377.jpg" alt="圖片" style="width:220px;height:220px;">
+    <img src="images/QR.png" alt="QR"></center>
+<!--<center><form><input type="button" value="介紹東方" onclick="login()"></form></center>-->
+<font size=6 face="標楷體">
+    <strong>
+        姓名:張廷毓 暱稱:坦克<img src="images/223.gif" align="right">
+        <p>
+            性別:男 生日:86/10/30
+        <p>
+            樂器:小提琴
+        <p>
+            興趣:<a href="game.html" target="_blank">onlinegame</a>,打籃球
+        <p>
+            背景來源: <a href="http://www.deviantart.com/art/Ene-Mekaku-City-Actors-Minimalist-Wallpaper-507765955"
+                     target="_blank">
+                <mark>圖源</mark>
+            </a>
+        <p>
+    </strong>
+    <center>
+        <footer style="color:red">
+            <p><font size=5>
+                    by 張廷毓<!--<img src="images/QR_phone.png" alt="QR">手機版通訊錄</font>-->
+            </p>
+        </footer>
+    </center>
+</font>
 
-<footer class="container-fluid text-center">
-    <p>亞洲大學 教師EPORTFOLIO∣台中市霧峰區柳豐路500號∣04-23323456</p>
-</footer>
-
+<!--<script src="js/bootstrap.min.js"></script>-->
 </body>
 </html>
-
